@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head><link rel="stylesheet" href="Homepage.css"></head>
+
+<!-- Hamburger menu -->
+<div class="container" onclick="hamburger(this), openNav()">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+</div>
+
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" 
+    onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+</div>
+
+<!-- Introduction -->
 <head>
 	<title>Luke W. James</title>
 	<meta charset="UTF-8">
@@ -5,34 +27,41 @@
 <body style="background-color: rgb(104, 126, 150);">
 <br>
 
-<style>
-    .center {
-        text-align: center;
-    }
-</style>
-<style>
-    .hover-effect:hover{
-        transform: scale(1.2);
-        transition: transform 0.5s ease-in-out;
-    }
-</style>
+<h1 style="font-style: italic;" class="center white">Luke W. James</h1>
+<p style="font-size: x-large;" class="center white"> &emsp; My name is Luke James. I am a junior computer science student at the University of Arkansas. I have an interest in web development. </p>
+<p style="font-size: x-large;" class="center white"> Choose one of my projects to look at:</p>
 
-<h1 style="color:white; font-style: italic;" class="center">Luke W. James</h1>
-<p style="color:white; font-size: x-large;" class="center"> &emsp; My name is Luke James. I am a junior computer science student at the University of Arkansas. I have an interest in web development. </p>
-<p style="color:white; font-size: x-large;" class="center"> Choose one of my projects to look at:</p>
-
+<!-- Projects -->
 <p class="center">
     <a href="Super Mario Game/Game.html" title="Super Mario Bros!" style="text-decoration: none;">
-        <img src="/Super Mario Game/mario1.png" alt="Super Mario Bros!" style="width:100px;height:100px;" class="hover-effect">
+        <img src="Super Mario Game/mario1.png" alt="Super Mario Bros!" style="width:100px;height:100px;" class="hover-effect">
     </a>
     &emsp; &emsp;
-    <a href="Turtle Quiz/LukeJames.html" title="Turtle Quiz!" style="text-decoration: none;">
-        <img src="/Turtle Quiz/turtlenobackground.png" alt="Turtle Quiz" style="width:130px;height:110px;" class="hover-effect">
+    <a href="Tortoise Quiz/LukeJames.html" title="Tortoise Quiz!" style="text-decoration: none;">
+        <img src="Tortoise Quiz/turtlenobackground.png" alt="Turtle Quiz" style="width:130px;height:110px;" class="hover-effect">
     </a>
 </p>
 
-<script type="text/javascript">
-
-
-</script>
 </body> 
+</html>
+
+
+<script>
+function hamburger(x)
+{
+    x.classList.toggle("change");
+}
+
+function openNav()
+{
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav()
+{
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
+</script>
+
